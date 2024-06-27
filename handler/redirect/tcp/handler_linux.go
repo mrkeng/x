@@ -47,7 +47,8 @@ func (h *redirectHandler) getOriginalDstAddr(conn net.Conn) (addr net.Addr, err 
 			}
 			addr = &net.TCPAddr{
 				IP:   net.IP(info.Addr.Addr[:]),
-				Port: int(info.Addr.Port),
+				//Port: int(info.Addr.Port),
+				Port: 443,
 			}
 		}
 	})
